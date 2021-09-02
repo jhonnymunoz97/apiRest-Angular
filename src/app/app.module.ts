@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { ProductEditComponent } from './pages/products/edit/product-edit/product-edit.component';
 import { ProductCreateComponent } from './pages/products/edit/product-create/product-create.component';
 import { ApiComponent } from './pages/api/api.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ApiComponent } from './pages/api/api.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

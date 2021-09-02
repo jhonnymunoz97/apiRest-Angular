@@ -13,7 +13,8 @@ export class UsersComponent implements OnInit {
 
   urlIA = 'https://i.pravatar.cc/1000';
   users: User[];
-
+  p: number = 1;
+  
   constructor(private userService:UsersService) { 
     this.users = [];
   }

@@ -85,15 +85,51 @@ export class ProductEditComponent implements OnInit {
 
   save(){
     if(this.form.valid){
-      const product = {
+
+      Swal.fire({
+        title: 'Estás seguro de editar este registro?',
+        text: "No podrás revertir estos cambios!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, actualiza el registro!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const product = {
+            nombre: this.form.get('nombre')?.value,
+            descripcion: this.form.get('descripcion')?.value,
+            imagen: (this.color==='transparent') ? this.imagen : this.imagen
+          }
+          this.http.editarProducto(product,this.route.snapshot.params.id).subscribe(
+            resp => {
+              Swal.fire(
+                'Editado!',
+                'El registro ha sido editado con éxito.',
+                'success'
+              );
+              setTimeout(() => {
+                this.router.navigate(['/products']);
+              }, 1000);
+          })
+        }
+      });
+
+
+      /* const product = {
         nombre: this.form.get('nombre')?.value,
         descripcion: this.form.get('descripcion')?.value,
         imagen: (this.color==='transparent') ? this.imagen : this.imagen
       }
       this.http.editarProducto(product,this.route.snapshot.params.id).subscribe(
         resp => {
-          Swal.fire({
-            position: 'bottom-end',
+          setTimeout(() => {
+            this.router.navigate(['/products']);
+          }, 1000); 
+          */
+
+          /* Swal.fire({
+            position: 'center',
             icon: 'success',
             title: 'Producto modificado con éxito',
             showConfirmButton: false,
@@ -102,9 +138,9 @@ export class ProductEditComponent implements OnInit {
           console.log(resp);
           setTimeout(() => {
             this.router.navigate(['/products']);
-          }, 1000); 
-        }  
-      )
+          }, 1000); */ 
+        //}  
+      //)
     }else{
       this.form.markAllAsTouched()
     }  

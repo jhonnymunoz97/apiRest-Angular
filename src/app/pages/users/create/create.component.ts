@@ -70,7 +70,7 @@ export class CreateComponent implements OnInit {
       this.http.registrarUsuario(form).subscribe(
         resp => {
           Swal.fire({
-            position: 'bottom-end',
+            position: 'center',
             icon: 'success',
             title: 'Usuario creado con éxito',
             showConfirmButton: false,

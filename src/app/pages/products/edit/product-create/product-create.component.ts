@@ -88,7 +88,7 @@ export class ProductCreateComponent implements OnInit {
       this.http.registrarProducto(product).subscribe(
         resp => {
           Swal.fire({
-            position: 'bottom-end',
+            position: 'center',
             icon: 'success',
             title: 'Producto registrado con éxito',
             showConfirmButton: false,

@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 export class ProductsComponent implements OnInit {
 
   products: Product[];
+  p: number = 1;
   
   constructor(private http:ProductsService) { 
     this.products = [];
