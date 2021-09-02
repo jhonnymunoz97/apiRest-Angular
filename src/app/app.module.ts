@@ -11,6 +11,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreateComponent } from './pages/users/create/create.component';
 import { EditComponent } from './pages/users/edit/edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductsComponent } from './pages/products/products.component';
+import { RouterModule } from '@angular/router';
+import { ProductEditComponent } from './pages/products/edit/product-edit/product-edit.component';
+import { ProductCreateComponent } from './pages/products/edit/product-create/product-create.component';
+import { ApiComponent } from './pages/api/api.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +24,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     UsersComponent,
     SidebarComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    ProductsComponent,
+    ProductEditComponent,
+    ProductCreateComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

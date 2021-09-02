@@ -1,5 +1,5 @@
 <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">       
+      <a [routerLink]="['/home']" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">       
         <i class="bi bi-book-half"></i>
         <span class="fs-4" [style.margin-left]="'10px'">PRÁCTICA 2</span>
       </a>
@@ -11,10 +11,20 @@
           </a>
         </li>
         <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" [routerLink]="['/api']"                  routerLinkActive="active" >
+          <i class="bi bi-bounding-box"></i><span [style.margin-left]="'10px'">API</span>
+          </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link text-white" aria-current="page" [routerLink]="['/users']"                  routerLinkActive="active" >
             <i class="bi bi-people-fill"></i><span [style.margin-left]="'10px'">Users</span>
             </a>
-          </li> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" [routerLink]="['/products']"                  routerLinkActive="active" >
+          <i class="bi bi-minecart"></i><span [style.margin-left]="'10px'">Productos</span>
+          </a>
+        </li>
       </ul>
       <hr>
 </div>  

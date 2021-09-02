@@ -1,0 +1,166 @@
+<div>
+    <h1>Uso de la API</h1>
+    <hr>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Dirección de la API
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                    <div class="alert alert-primary" role="alert" [style.display]="'flex'">
+                        <div >
+                            <span >
+                                <h5 [style.background]="'blue'" [style.color]="'white'">GET</h5>
+                            </span>
+                        </div>
+                        <div class="ms-2">
+                            <p [style.color]="'black'">http://127.0.0.1:8000/api</p>
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+        
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Componente de Usuarios
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <div class="alert alert-success" role="alert" [style.display]="'flex'">
+                    <div >
+                        <span >
+                            <h5 [style.background]="'green'" [style.color]="'white'">GET</h5>
+                        </span>
+                    </div>
+                    <div class="ms-2">
+                        <p [style.color]="'black'"> {{ usersApi.index }} </p>
+                    </div>
+                </div>
+                <div class="alert alert-primary" role="alert" [style.display]="'flex'">
+                    <div >
+                        <span >
+                            <h5 [style.background]="'blue'" [style.color]="'white'">POST</h5>
+                        </span>
+                    </div>
+                    <div class="ms-2">
+                        <p [style.color]="'black'"> {{ usersApi.store }} </p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="alert alert-success" role="alert" [style.display]="'flex'">
+                    <div >
+                        <span >
+                            <h5 [style.background]="'green'" [style.color]="'white'">GET</h5>
+                        </span>
+                    </div>
+                    <div class="ms-2">
+                        <p [style.color]="'black'"> {{ usersApi.show }} </p>
+                    </div>
+                </div>
+                <div class="alert alert-warning" role="alert" [style.display]="'flex'">
+                    <div >
+                        <span >
+                            <h5 [style.background]="'orange'" [style.color]="'white'">PUT</h5>
+                        </span>
+                    </div>
+                    <div class="ms-2">
+                        <p [style.color]="'black'"> {{ usersApi.update }} </p>
+                    </div>
+                </div>
+                <div class="alert alert-danger" role="alert" [style.display]="'flex'">
+                    <div >
+                        <span >
+                            <h5 [style.background]="'red'" [style.color]="'white'">DELETE</h5>
+                        </span>
+                    </div>
+                    <div class="ms-2">
+                        <p [style.color]="'black'"> {{ usersApi.delete }} </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      
+        
+        
+        
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Componente de Productos
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <div class="alert alert-success" role="alert" [style.display]="'flex'">
+                    <div >
+                        <span >
+                            <h5 [style.background]="'green'" [style.color]="'white'">GET</h5>
+                        </span>
+                    </div>
+                    <div class="ms-2">
+                        <p [style.color]="'black'"> {{  productsApi.index }} </p>
+                    </div>
+                </div>
+                <div class="alert alert-primary" role="alert" [style.display]="'flex'">
+                    <div >
+                        <span >
+                            <h5 [style.background]="'blue'" [style.color]="'white'">POST</h5>
+                        </span>
+                    </div>
+                    <div class="ms-2">
+                        <p [style.color]="'black'"> {{  productsApi.store }} </p>
+                    </div>
+                </div>
+                <div class="alert alert-success" role="alert" [style.display]="'flex'">
+                    <div >
+                        <span >
+                            <h5 [style.background]="'green'" [style.color]="'white'">GET</h5>
+                        </span>
+                    </div>
+                    <div class="ms-2">
+                        <p [style.color]="'black'"> {{  productsApi.show }} </p>
+                    </div>
+                </div>
+                <div class="alert alert-warning" role="alert" [style.display]="'flex'">
+                    <div >
+                        <span >
+                            <h5 [style.background]="'orange'" [style.color]="'white'">PUT</h5>
+                        </span>
+                    </div>
+                    <div class="ms-2">
+                        <p [style.color]="'black'"> {{ productsApi.update }} </p>
+                    </div>
+                </div>
+                <div class="alert alert-danger" role="alert" [style.display]="'flex'">
+                    <div >
+                        <span >
+                            <h5 [style.background]="'red'" [style.color]="'white'">DELETE</h5>
+                        </span>
+                    </div>
+                    <div class="ms-2">
+                        <p [style.color]="'black'"> {{ productsApi.delete }} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label class="accordion-header"></label>
+        
+         
+      </div>
+
+</div>

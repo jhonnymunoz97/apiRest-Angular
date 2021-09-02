@@ -12,7 +12,7 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   obtenerUsuarios(){
-    return this.http.get(environment.apiUrl + '/api/v1/users')
+    return this.http.get(environment.apiUrl + '/api/v1/users');
   }
 
   registrarUsuario(form:User){
